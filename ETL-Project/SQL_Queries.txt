@@ -9,3 +9,15 @@ SELECT *
 FROM active_stocks a
 INNER JOIN loser_table l ON l."Symbol" = a."Symbol"
 ;
+
+SELECT *
+FROM ticker_data t
+INNER JOIN active_stocks a ON a.symbol = t.symbol
+
+
+SELECT * 
+FROM active_stocks a
+LEFT JOIN ticker_data t on t.symbol = a.symbol
+WHERE t.ipo_year = 1999
+;
+
