@@ -1,0 +1,71 @@
+
+CREATE TABLE public.active_stocks
+(
+	id serial primary key, 
+    symbol text COLLATE pg_catalog."default",
+    name text COLLATE pg_catalog."default",
+    price_intraday double precision,
+    change double precision,
+    pct_change text COLLATE pg_catalog."default",
+    volume_millions double precision,
+    avg_3_month_vol_millions double precision,
+    market_cap text COLLATE pg_catalog."default",
+    date text COLLATE pg_catalog."default", 
+	last_updated timestamp default localtimestamp
+	
+)
+;
+
+CREATE TABLE public.gain_table
+(
+    id serial primary key, 
+	symbol text COLLATE pg_catalog."default",
+    name text COLLATE pg_catalog."default",
+    price_intraday double precision,
+    change double precision,
+    pct_change text COLLATE pg_catalog."default",
+    volume_millions double precision,
+    avg_3_month_vol_millions double precision,
+    market_cap text COLLATE pg_catalog."default",
+    date text COLLATE pg_catalog."default",
+	last_updated timestamp default localtimestamp
+)
+;
+
+
+CREATE TABLE public.loser_table
+(
+    id serial primary key, 
+	symbol text COLLATE pg_catalog."default",
+    name text COLLATE pg_catalog."default",
+    price_intraday double precision,
+    change double precision,
+    pct_change text COLLATE pg_catalog."default",
+    volume_millions double precision,
+    avg_3_month_vol_millions double precision,
+    market_cap text COLLATE pg_catalog."default",
+    date text COLLATE pg_catalog."default",
+	last_updated timestamp default localtimestamp
+)
+;
+
+
+CREATE TABLE public.ticker_data
+(
+    id serial primary key, 
+	symbol text COLLATE pg_catalog."default",
+    name text COLLATE pg_catalog."default",
+    last_sale text COLLATE pg_catalog."default",
+    net_change double precision,
+    pct_change double precision,
+    market_cap double precision,
+    country text COLLATE pg_catalog."default",
+    ipo_year double precision,
+    volume bigint,
+    sector text COLLATE pg_catalog."default",
+    industry text COLLATE pg_catalog."default",
+	last_updated timestamp default localtimestamp
+)
+
+
+
