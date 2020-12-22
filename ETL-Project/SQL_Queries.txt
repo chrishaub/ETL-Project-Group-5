@@ -2,12 +2,12 @@ ETL Queries
 
 SELECT * 
 FROM active_stocks a
-INNER JOIN gain_table g ON g.Symbol = a.Symbol
+INNER JOIN gain_table g ON g.symbol = a.symbol
 ;
 
 SELECT * 
 FROM active_stocks a
-INNER JOIN loser_table l ON l."Symbol" = a."Symbol"
+INNER JOIN loser_table l ON l.Symbol = a.Symbol
 ;
 
 SELECT *
